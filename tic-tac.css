@@ -1,4 +1,4 @@
-:root { 
+:root {
     --color-bcg: #1A2A33;
     --color-light-bcg: #1F3641;
     --color-shadow-tile: #141f25;
@@ -10,7 +10,7 @@
     --color-blue-bcg: #65E9E4;
     --color-white: #DBE8ED;
 
-    --space-base: 20px; 
+    --space-base: 20px;
 
     --font-size-desc-sm: 14px;
     --font-size-desk-bs: 16px;
@@ -55,7 +55,7 @@ body {
     max-width: 457px;
 }
 
-.head {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -119,6 +119,32 @@ body {
     box-shadow: var(--shadow) var(--color-gray-bcg);
 }
 
+@media(max-width:630px) {
+    .container {
+        max-width: 328px;
+    }
+
+    .head {
+        max-width: 328px;
+        max-height: 40px;
+    }
+
+    .head__button_reset {
+        max-height: 40px;
+        max-width: 40px;
+    }
+
+    .head__button_turn {
+        max-height: 40px;
+        max-width: 96px;
+    }
+
+    .button-img {
+        max-height: 16px;
+    }
+}
+
+
 .main {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -145,6 +171,24 @@ body {
 .main__tile_icon {
     height: 100%;
     max-height: 64px;
+}
+
+@media(max-width:630px) {
+   
+    .main {
+        margin-top: 80px;
+    }
+
+    .main__tile {
+        height: 96px;
+        width: 96px;
+    }
+
+
+    .main__tile_icon {
+        height: 100%;
+        max-height: 40px;
+    }
 }
 
 .foot {
@@ -186,14 +230,32 @@ body {
     font-weight: var(--font-weight-medium);
 }
 
-.count {
+.foot_count {
     font-size: var(--font-size-desk-lg);
     font-weight: var(--font-weight-bold);
 }
 
+@media(max-width:630px) {
+    .foot {
+        max-height: 64px;
+        max-width: 328px;
+    }
+
+    .foot_tile {
+        max-width: 328px;
+    }
+
+    .button_title {
+        font-size: var(--font-size-mob-xxs);
+    }
+
+    .foot_count {
+        font-size: var(--font-size-mob-bs);
+    }
+}
+
 .layout {
     position: fixed;
-    z-index: 10;
     top: 0;
     left: 0;
     opacity: 50%;
@@ -293,63 +355,8 @@ body {
 
 }
 
-
-
 @media(max-width:630px) {
-    .container {
-        max-width: 328px;
-    }
-
-    .main {
-        margin-top: 80px;
-    }
-
-    .main__tile {
-        height: 96px;
-        width: 96px;
-    }
-
-    .head {
-        max-width: 328px;
-        max-height: 40px;
-    }
-
-    .head__button_reset {
-        max-height: 40px;
-        max-width: 40px;
-    }
-
-    .head__button_turn {
-        max-height: 40px;
-        max-width: 96px;
-    }
-
-    .button-img {
-        max-height: 16px;
-    }
-
-    .main__tile_icon {
-        height: 100%;
-        max-height: 40px;
-    }
-
-    .foot {
-        max-height: 64px;
-        max-width: 328px;
-    }
-
-    .foot_tile {
-        max-width: 328px;
-    }
-
-    .button_title {
-        font-size: var(--font-size-mob-xxs);
-    }
-
-    .count {
-        font-size: var(--font-size-mob-bs);
-    }
-
+    
     .gameover {
         height: 228px;
     }
